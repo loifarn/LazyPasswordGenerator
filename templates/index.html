@@ -1,24 +1,30 @@
-<html>
+<!DOCTYPE html>
+<html lang ="en">
     <head>
         <title>Lazy Password Generator</title>
+        <link rel= "stylesheet" type= "text/css" href="{{ url_for('static', filename='resources/style.css')}}">
+        <link rel= "stylesheet" type= "text/css" href="{{ url_for('static', filename='vendors/grid.css')}}">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet" type="text/css">
     </head>
-    <body>
-        <form action="" method="post">
-            {{ form.csrf }}
-            <div>
-                {% with messages = get_flashed_messages(with_categories=true) %}
-                    {% if messages %}
-                        {% for message in messages %}
-                            <p>{{ message[1] }}</p>
-                        {% endfor %}
-                    {% endif %}
-                {% endwith %}
-                {{ form.password.label }} {{ form.password }}
+   <body>
+       
+    <div class="hero">
+       <div class="col span-1-of-3 box"></div>
+        <div class="col span-1-of-3 box">
+            <div class="box-designed">  
+                <form action="http://0.0.0.0:80/generator" method="POST" enctype="multipart/form-data">
+                    <div class="inner">
+                        <h2>Lazy Password Generator</h2>
+                        {{ form.seed.label }}<br>
+                        {{ form.seed }}<br>
+                        {{ form.password.label }}<br>
+                        {{ form.password }}<br>
+                        {{ form.submit }}
+                    </div>
+                </form>
             </div>
- 
-            <div class="input submit">
-                <input type="submit" value="Submit" />
-            </div>
-        </form>
-    </body>
+        </div>
+        <div class="col span-1-of-3 box"></div>
+    </div>
+   </body>
 </html>
