@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Lazy Password Generator</title>
+    </head>
+    <body>
+        <form action="" method="post">
+            {{ form.csrf }}
+            <div>
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <p>{{ message[1] }}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                {{ form.password.label }} {{ form.password }}
+            </div>
+ 
+            <div class="input submit">
+                <input type="submit" value="Submit" />
+            </div>
+        </form>
+    </body>
+</html>
