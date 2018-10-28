@@ -1,0 +1,77 @@
+body {
+    background-image: url('../images/background.jpg');
+    color: black;
+    font-family: 'Lato', 'Arial';
+    font-weight: 300;
+}
+
+.hero {
+    position: absolute;
+    top: 40%;
+    left: 38.5%;
+    transform: translate(-50%, -50%)
+}
+
+.box-designed {
+    width: 575px;
+    height: 295px;
+    border-radius: 25%;
+    border-style: solid;
+    border-color: black;
+    position: relative;
+}
+
+.inner {
+    position: relative;
+    left: 25%;
+    right: 25%;
+}
+
+
+/* ----- Buttons ----- */
+
+.btn:link,
+.btn:visited,
+input[type=submit]{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    color: #fff;
+    transition: background-color 0.25s, border 0.25s, color 0.25s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit]{
+    background-color: #366425ea;
+    border: 1px solid #366425ea;
+    color: #fff;
+    margin-top: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited{
+    border: solid 1px #366425ea;
+    color: #FF971E;
+}
+
+
+.btn:hover,
+.btn:active {
+    background-color: #366425ea;
+}
+
+.btn-full:hover,
+.btn-full:active,
+input[type=submit]{
+    background-color: #366425ea;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active{
+    border: solid 1px;
+    border-color: #366425ea;
+    color: #FFF;
+}
