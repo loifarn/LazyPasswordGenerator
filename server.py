@@ -48,6 +48,6 @@ def serve_new_password():
 api.add_resource(Password, '/api')
 
 
-# Starting the program, served at 0.0.0.0 on port 1337
+# Starting the program, served at 0.0.0.0 on port 80
 if __name__ == '__main__':
    app.run(host='0.0.0.0', port='80')
